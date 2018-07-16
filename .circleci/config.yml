@@ -1,0 +1,10 @@
+version: 2
+
+jobs:
+  build:
+    docker:
+      - image: 'registry.fedoraproject.org/fedora:28'
+    working_directory: /src
+    steps:
+      - checkout
+      - run: tests/build.sh
